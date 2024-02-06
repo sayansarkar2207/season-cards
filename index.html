@@ -9,7 +9,12 @@
   </head>
 
   <body>
-    <section class="season-section night">
+    <div class="button-container">
+      <button id="day" class="button" onclick="changeSeason('day')">Day</button>
+      <button id="night" class="button" onclick="changeSeason('night')">Night</button>
+      <button id="rainy" class="button" onclick="changeSeason('rainy')">Rainy</button>
+    </div>
+    <section id="season-section" class="season-section day">
       <div class="weather-background">
         <div class="sun"></div>
 
@@ -42,7 +47,7 @@
             <div class="rain-drop raindrop19"></div>
             <div class="rain-drop raindrop20"></div>
           </div>
-          <div class="weather-type">Sunny</div>
+          <div id="weather" class="weather-type">Sunny</div>
           <div class="information">
             <div class="weather-report">
               <div class="temparature">
@@ -72,5 +77,21 @@
         </div>
       </div>
     </section>
+
+    <script>
+      function changeSeason(season) {
+        const seasonSection = document.getElementById('season-section');
+        seasonSection.className = 'season-section ' + season;
+        const weatherText = document.getElementById('weather');
+      if (season === 'day') {
+        weatherText.textContent = 'Sunny';
+      } else if (season === 'night') {
+        weatherText.textContent = 'Cloudy';
+      } else if (season === 'rainy') {
+        weatherText.textContent = 'Rainy';
+      }
+      }
+    </script>
+
   </body>
 </html>

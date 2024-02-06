@@ -144,14 +144,14 @@
 .weather-type {
   font-size: 24px;
   color: white;
-  padding-left: 7%;
+  padding-left: 60px;
   padding-top: 6%;
 }
 
 .information {
   display: flex;
   width: 119%;
-  padding-left: 6%;
+  padding-left: 60px;
 }
 
 .verticalLine {
@@ -221,7 +221,6 @@
   overflow: hidden;
   display: flex;
   align-items: center;
-  padding: 0 75px;
 }
 .day .sun {
   width: 170px;
@@ -417,3 +416,43 @@
   position: absolute;
   filter: blur(2px);
 }/*# sourceMappingURL=style.css.map */
+
+.button-container {
+  padding-top:1%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 25px;
+  font-weight: bolder;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+#day {
+  background: linear-gradient(to right, #d66900, #e8b03f, #fced0a); /* Sky Blue */
+  color: #000;
+}
+
+#night {
+  background: linear-gradient(to right, #551fe8, #de37f8, #c062e3); /* Dark Slate Gray */
+  color: #fff;
+}
+
+#rainy {
+  background: linear-gradient(to right, #01bfa4, #39d8a4, #8bfca1); /* Steel Blue */
+  color: #000;
+}
+
+body{
+  background-color: #000;
+  justify-content: center;
+      align-items: center;
+}
